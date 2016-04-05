@@ -1,0 +1,28 @@
+{
+  "name": "brds",
+  "version": "1.0.0",
+  "description": "brds site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laarniastrid/b.rds.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laarniastrid/b.rds/issues"
+  },
+  "homepage": "https://github.com/laarniastrid/b.rds#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.11"
+  },
+  "engines": {
+    "node": "4.4.0"
+  },
+  "devDependencies": {}
+}
