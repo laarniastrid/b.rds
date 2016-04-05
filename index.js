@@ -4,8 +4,8 @@ var express = require('express'),
     mongoose = require('mongoose'),
     port = process.env.PORT || 8000,
     connectPath = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/brds',
-    app = express(),
-    keys = require('./keys.js');
+    app = express();
+    // keys = require('./keys.js');
 
 
 // ---------- .use for app ----------
