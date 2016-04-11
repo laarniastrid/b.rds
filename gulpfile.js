@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     // uglify = require('gulp-uglify'),
     uglifycss = require('gulp-uglifycss'),
     ngAnnotate = require('gulp-ng-annotate'),
-    watcher = gulp.watch(['./main/client/src/**/*.js', './main/styles/*.scss', './main/client/features/**/*.html'], ['default']);
+    watcher = gulp.watch(['./main/**/*.js', './main/styles/*.scss', './main/**/*.html'], ['default']);
 
 watcher.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ' at ' + new Date() + ' , running tasks...');
