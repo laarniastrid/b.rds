@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+
+  </head>
+  <body>
+
+    <!-- <div class="test">Hello there</div> -->
+    <div ng-controller="mainCtrl as vm">{{ vm.test }}</div>
+
+    <ui-view></ui-view>
+
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script> <!-- angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script> <!-- angular ui router -->
+
+    <script src="./scripts/js/app.js"></script>
+    <script src="./scripts/controls/mainCtrl.js"></script>
+
+
+  </body>
+</html>
