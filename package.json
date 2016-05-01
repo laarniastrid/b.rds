@@ -19,6 +19,7 @@
   "homepage": "https://github.com/laarniastrid/brds#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
+    "bootstrap-sass": "^3.3.6",
     "express": "^4.13.4",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
@@ -31,7 +32,8 @@
     "node": "4.4.0"
   },
   "devDependencies": {
-    "bootstrap-sass": "^3.3.6",
-    "grunt": "^1.0.1"
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
   }
 }

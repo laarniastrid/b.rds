@@ -47,3 +47,12 @@ angular.module('myApp', ['ui.router'])
   $urlRouterProvider.otherwise('/');
 
 }]) // end config
+
+angular.module('myApp')
+
+.directive('navDir', function() {
+  return {
+    restrict: 'E',
+    templateUrl: './html/navigation/navTmpl.html'
+  }
+})

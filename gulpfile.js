@@ -11,12 +11,12 @@ watcher.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ' at ' + new Date() + ' , running tasks...');
 });
 
-gulp.task('styles', function() { // will double check out styles|sass wording|npm install
+gulp.task('sass', function() { // will double check out styles|sass wording|npm install
     return gulp.src('./main/**/*.scss')
         // .pipe(stylus())
         .pipe(sass())
         // .pipe(uglifycss())
-        .pipe(concat('styles.css'))
+        .pipe(concat('main.css'))
         .pipe(gulp.dest('./public/styles'))
 });
 
@@ -34,4 +34,4 @@ gulp.task('html', function() {
         .pipe(gulp.dest('./public/html/'))
 });
 
-gulp.task('default', ['styles', 'javascript', 'html']);
+gulp.task('default', ['sass', 'javascript', 'html']);
