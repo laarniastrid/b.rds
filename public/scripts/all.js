@@ -4,7 +4,7 @@ angular.module('myApp', ['ui.router'])
 
   $stateProvider
   .state('home', {
-    url: '/home',
+    url: '/',
     templateUrl: './html/home/homeView.html'
   })
   .state('about', {
@@ -44,6 +44,6 @@ angular.module('myApp', ['ui.router'])
     templateUrl: './html/cartView.html'
   })
 
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/');
 
 }]) // end config
