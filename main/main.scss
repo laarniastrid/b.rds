@@ -1,0 +1,29 @@
+html, body {
+  box-sizing: border-box;
+  // padding: 0;
+  // margin: 0;
+}
+
+#home, #about, #contact, #trafficking {
+  width: 100%;
+  height: 100vh;
+}
+
+#about {
+  background: rgb(189,106,56);
+  background: rgba(189,106,56,0.85);
+}
+
+#contact {
+  background: rgb(90,37,37);
+  background: rgba(90,37,37,0.85);
+}
+
+#trafficking {
+  background: rgb(40,103,97);
+  background: rgba(40,103,97,0.85);
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
