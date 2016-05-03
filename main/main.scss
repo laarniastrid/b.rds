@@ -1,6 +1,6 @@
 @mixin iconArrows() {
     font-size: 45px;
-    color: black;
+    color: rgb(34, 34, 34);
 }
 
 html, body {
@@ -40,7 +40,7 @@ body {
 
 .home-bottom, .about-bottom, .contact-bottom, .traffic-bottom {
   width: 100%;
-  height: 8vh;
+  height: 50px;
   position: fixed;
   bottom: 0;
   display: flex;
@@ -51,11 +51,26 @@ body {
   }
 }
 
-.about-left, .contact-left, traffic-left {
-  width: 8vw;
+.about-left, .contact-left, .traffic-left {
+  width: 40px;
   height: 100%;
   position: fixed;
+  top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+
+  i {
+    @include iconArrows;
+  }
+}
+
+.about-right, .contact-right, .traffic-right {
+  width: 40px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
   display: flex;
   align-items: center;
 

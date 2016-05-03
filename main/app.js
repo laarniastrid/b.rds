@@ -15,8 +15,8 @@ angular.module('myApp', ['ui.router'])
     url: '/contact',
     templateUrl: './html/contact/contactView.html'
   })
-  .state('trafficking', {
-    url: '/trafficking',
+  .state('traffic', {
+    url: '/traffic',
     templateUrl: './html/trafficking/traffickingView.html'
   })
   .state('sellBrds', {
