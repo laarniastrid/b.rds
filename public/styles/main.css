@@ -1,6 +1,9 @@
 html, body {
   box-sizing: border-box; }
 
+body {
+  padding-top: 50px; }
+
 #home, #about, #contact, #trafficking {
   width: 100%;
   height: 100vh; }
@@ -42,3 +45,18 @@ html, body {
     #home .jumbotron p {
       margin-left: 50px;
       margin-right: 50px; }
+
+.navbar-fixed-bottom {
+  background: none;
+  border: none; }
+
+.home-bottom {
+  width: 100%;
+  height: 7vh;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center; }
+  .home-bottom i {
+    font-size: 45px;
+    color: black; }
