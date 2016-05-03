@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
-    // stylus = require('gulp-stylus'),
     sass = require('gulp-sass'),
+    // addsrc = require('gulp-add-src'),
+    // order = require('gulp-order'),
     concat = require('gulp-concat'),
     // uglify = require('gulp-uglify'),
     uglifycss = require('gulp-uglifycss'),
@@ -21,9 +22,15 @@ gulp.task('sass', function() { // will double check out styles|sass wording|npm 
 });
 
 gulp.task('javascript', function() {
-    gulp.src('./main/**/*.js')
+    gulp.src(['./main/**/*.js'])
         .pipe(ngAnnotate())
         // .pipe(uglify())
+        // .pipe(addsrc('./animateDir.js'))
+        // .pipe(order([
+        //   'app.js',
+        //   'main/**/*.js',
+        //   'animateDir.js'
+        // ], { base: './' }))
         .pipe(concat('all.js'))
         .pipe(gulp.dest('./public/scripts'))
 });

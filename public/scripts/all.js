@@ -48,6 +48,22 @@ angular.module('myApp', ['ui.router'])
 
 }]) // end config
 
+
+angular.module('myApp')
+
+.directive('animateDir', ["$state", function($state) {
+  return {
+    restrict: 'A'
+    // link: function(scope, ele, att) {
+    //   $('.home-bottom').click(function() {
+    //     setTimeout(function() {
+    //       $('#about').addClass('.slideDown');
+    //     }, 150)
+    //   })
+    // }
+  }  // end return
+}])  // end animateDir
+
 angular.module('myApp')
 
 .directive('navDir', function() {

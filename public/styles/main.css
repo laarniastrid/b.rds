@@ -4,7 +4,7 @@ html, body {
 body {
   padding-top: 50px; }
 
-#home, #about, #contact, #trafficking {
+#home, #about, #contact, #traffic {
   width: 100%;
   height: 95vh; }
 
@@ -16,7 +16,7 @@ body {
   background: #5a2525;
   background: rgba(90, 37, 37, 0.85); }
 
-#trafficking {
+#traffic {
   background: #286761;
   background: rgba(40, 103, 97, 0.85); }
 
