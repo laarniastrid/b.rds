@@ -33,7 +33,7 @@ body {
   .home-bottom i, .about-bottom i, .contact-bottom i, .traffic-bottom i {
     font-size: 55px;
     color: white;
-    color: rgba(255, 255, 255, 0.75); }
+    color: rgba(255, 255, 255, 0.5); }
     .home-bottom i:hover, .about-bottom i:hover, .contact-bottom i:hover, .traffic-bottom i:hover {
       color: #222222; }
 
@@ -48,7 +48,7 @@ body {
   .about-left i, .contact-left i, .traffic-left i {
     font-size: 55px;
     color: white;
-    color: rgba(255, 255, 255, 0.75); }
+    color: rgba(255, 255, 255, 0.5); }
     .about-left i:hover, .contact-left i:hover, .traffic-left i:hover {
       color: #222222; }
 
@@ -57,13 +57,13 @@ body {
   height: 100%;
   position: fixed;
   top: 0;
-  right: 10px;
+  right: 15px;
   display: flex;
   align-items: center; }
   .about-right i, .contact-right i, .traffic-right i {
     font-size: 55px;
     color: white;
-    color: rgba(255, 255, 255, 0.75); }
+    color: rgba(255, 255, 255, 0.5); }
     .about-right i:hover, .contact-right i:hover, .traffic-right i:hover {
       color: #222222; }
 
@@ -112,9 +112,6 @@ body {
   justify-content: center;
   align-items: center; }
   #contact form {
-    width: 75%;
-    height: auto;
-    background: white;
     padding: 20px;
     border-radius: 5px; }
     #contact form button {

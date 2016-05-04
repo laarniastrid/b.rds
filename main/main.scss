@@ -1,7 +1,7 @@
 @mixin iconArrows() {
     font-size: 55px;
     color: white;
-    color: rgba(255,255,255,0.75);
+    color: rgba(255,255,255,0.5);
 
     &:hover {
       color: rgb(34,34,34);
@@ -75,7 +75,7 @@ body {
   height: 100%;
   position: fixed;
   top: 0;
-  right: 10px;
+  right: 15px;
   display: flex;
   align-items: center;
 
