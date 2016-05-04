@@ -31,7 +31,7 @@ body {
   display: flex;
   justify-content: center; }
   .home-bottom i, .about-bottom i, .contact-bottom i, .traffic-bottom i {
-    font-size: 45px;
+    font-size: 55px;
     color: white;
     color: rgba(255, 255, 255, 0.75); }
     .home-bottom i:hover, .about-bottom i:hover, .contact-bottom i:hover, .traffic-bottom i:hover {
@@ -46,7 +46,7 @@ body {
   display: flex;
   align-items: center; }
   .about-left i, .contact-left i, .traffic-left i {
-    font-size: 45px;
+    font-size: 55px;
     color: white;
     color: rgba(255, 255, 255, 0.75); }
     .about-left i:hover, .contact-left i:hover, .traffic-left i:hover {
@@ -61,7 +61,7 @@ body {
   display: flex;
   align-items: center; }
   .about-right i, .contact-right i, .traffic-right i {
-    font-size: 45px;
+    font-size: 55px;
     color: white;
     color: rgba(255, 255, 255, 0.75); }
     .about-right i:hover, .contact-right i:hover, .traffic-right i:hover {
@@ -106,6 +106,26 @@ body {
 
 .slideRight {
   animation: slideRight 1s ease; }
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #contact form {
+    width: 75%;
+    height: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px; }
+    #contact form button {
+      position: relative;
+      left: 50%;
+      transform: translate(-50%); }
+      #contact form button:hover {
+        color: white;
+        background: #5a2525;
+        background: rgba(90, 37, 37, 0.85);
+        border: none; }
 
 #home {
   background: #283b67;
