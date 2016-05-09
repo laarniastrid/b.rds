@@ -19,22 +19,22 @@ angular.module('myApp', ['ui.router'])
     url: '/traffic',
     templateUrl: './html/traffic/trafficView.html'
   })
-  .state('sellBrds', {
-    url: '/sellBrds',
-    templateUrl: './html/sellBrds/sellBrdsView.html'
-  })
-  .state('rentBrds', {
-    url: '/rentBrds',
-    templateUrl: './html/rentBrds/rentBrdsView.html'
-  })
-  .state('donateBrds', {
-    url: '/donateBrds',
-    templateUrl: './html/donateBrds/donateBrdsView.html'
-  })
-  .state('buyBrds', {
-    url: '/buyBrds',
-    templateUrl: './html/buyBrds/buyBrdsView.html'
-  })
+  // .state('sellBrds', {
+  //   url: '/sellBrds',
+  //   templateUrl: './html/sellBrds/sellBrdsView.html'
+  // })
+  // .state('rentBrds', {
+  //   url: '/rentBrds',
+  //   templateUrl: './html/rentBrds/rentBrdsView.html'
+  // })
+  // .state('donateBrds', {
+  //   url: '/donateBrds',
+  //   templateUrl: './html/donateBrds/donateBrdsView.html'
+  // })
+  // .state('buyBrds', {
+  //   url: '/buyBrds',
+  //   templateUrl: './html/buyBrds/buyBrdsView.html'
+  // })
   .state('store', {
     url: '/store',
     templateUrl: './html/store/storeView.html'
