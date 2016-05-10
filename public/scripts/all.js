@@ -13,7 +13,9 @@ angular.module('myApp', ['ui.router'])
   })
   .state('contact', {
     url: '/contact',
-    templateUrl: './html/contact/contactView.html'
+    templateUrl: './html/contact/contactView.html',
+    controller: 'contactCtrl',
+    controllerAs: 'vm'
   })
   .state('traffic', {
     url: '/traffic',
@@ -63,6 +65,67 @@ angular.module('myApp')
     // }
   }  // end return
 }])  // end animateDir
+
+angular.module('myApp')
+
+.controller('contactCtrl', ["contactSvc", function(contactSvc) {
+  let vm = this;
+
+  vm.contactUrl = contactSvc.getUrl();
+
+  vm.sendRequest = (input) => {
+    contactSvc.setData(input.name, input.email, input.message);
+    contactSvc.sendMessage();
+    vm.sendData = '';
+  }
+
+}])  // end contactCtrl
+
+angular.module('myApp')
+
+.service('contactSvc', ["$http", function($http) {
+
+  let sendUrl = 'https://formspree.io/laarni.astrid@gmail.com';
+  let sendData = {
+    name: '',
+    email: '',
+    message: ''
+  };
+  let sendSuccess = 'Your message was sent!';
+
+  // ---------- setters ---------- //
+  this.setData = (name, email, message) => {
+    sendData.name = name;
+    sendData.email = email;
+    sendData.message = message;
+  }
+
+  // ---------- getters ---------- //
+  this.getUrl = () => {
+    return sendUrl;
+  }
+
+  // ---------- manipulators ---------- //
+  this.sendMessage = (name, email, message) => {
+    $.ajax({
+      url: sendUrl,
+      method: 'POST',
+      data: sendData,
+      dataType: 'json',
+      error: (response) => {
+        ifSuccess(response);
+      },
+      success: () => {
+        ifSuccess(sendSuccess);
+      }
+    })
+  }
+
+  function ifSuccess(data) {
+    alert(data);
+  }
+
+}])  // end contactSvc
 
 angular.module('myApp')
 

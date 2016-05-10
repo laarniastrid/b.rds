@@ -13,7 +13,9 @@ angular.module('myApp', ['ui.router'])
   })
   .state('contact', {
     url: '/contact',
-    templateUrl: './html/contact/contactView.html'
+    templateUrl: './html/contact/contactView.html',
+    controller: 'contactCtrl',
+    controllerAs: 'vm'
   })
   .state('traffic', {
     url: '/traffic',
