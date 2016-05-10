@@ -13,7 +13,9 @@ angular.module('myApp', ['ui.router'])
   })
   .state('contact', {
     url: '/contact',
-    templateUrl: './html/contact/contactView.html'
+    templateUrl: './html/contact/contactView.html',
+    controller: 'contactCtrl',
+    controllerAs: 'vm'
   })
   .state('traffic', {
     url: '/traffic',
@@ -63,6 +65,16 @@ angular.module('myApp')
     // }
   }  // end return
 }])  // end animateDir
+
+angular.module('myApp')
+
+.controller('contactCtrl', function() {
+  let vm = this;
+
+  vm.test = 'this is the contact page';
+
+})  // end contactCtrl
+
 
 angular.module('myApp')
 
