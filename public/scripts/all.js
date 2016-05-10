@@ -19,7 +19,9 @@ angular.module('myApp', ['ui.router'])
   })
   .state('traffic', {
     url: '/traffic',
-    templateUrl: './html/traffic/trafficView.html'
+    templateUrl: './html/traffic/trafficView.html',
+    controller: 'trafficCtrl',
+    controllerAs: 'vm'
   })
   // .state('sellBrds', {
   //   url: '/sellBrds',
@@ -135,3 +137,17 @@ angular.module('myApp')
     templateUrl: './html/navigation/navTmpl.html'
   }
 })
+
+angular.module('myApp')
+
+.controller('trafficCtrl', function() {
+  let vm = this;
+
+  vm.typesSource = 'http://www.endslaverynow.org/learn/slavery-today';
+  
+  // test tab jquery
+  $('nav-tabs li').click(function() {
+    console.log('hi there');
+  })
+
+})  // end trafficCtrl

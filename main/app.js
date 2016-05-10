@@ -19,7 +19,9 @@ angular.module('myApp', ['ui.router'])
   })
   .state('traffic', {
     url: '/traffic',
-    templateUrl: './html/traffic/trafficView.html'
+    templateUrl: './html/traffic/trafficView.html',
+    controller: 'trafficCtrl',
+    controllerAs: 'vm'
   })
   // .state('sellBrds', {
   //   url: '/sellBrds',
