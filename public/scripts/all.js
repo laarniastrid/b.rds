@@ -144,9 +144,9 @@ angular.module('myApp')
   let vm = this;
 
   vm.typesSource = 'http://www.endslaverynow.org/learn/slavery-today';
-  
+
   // test tab jquery
-  $('nav-tabs li').click(function() {
+  $('nav-tabs-li').click(function() {
     console.log('hi there');
   })
 

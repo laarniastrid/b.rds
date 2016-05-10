@@ -6,7 +6,7 @@ angular.module('myApp')
   vm.typesSource = 'http://www.endslaverynow.org/learn/slavery-today';
 
   // test tab jquery
-  $('nav-tabs').click(function() {
+  $('nav-tabs-li').click(function() {
     console.log('hi there');
   })
 
