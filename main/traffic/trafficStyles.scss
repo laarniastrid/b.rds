@@ -3,6 +3,45 @@
   justify-content: center;
   align-items: center;
 
+  ul {
+    list-style: none;
+
+    li {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .panel-body {
+    height: 350px;
+  }
+
+  #types {
+
+    p {
+
+      em {
+        color: rgb(40, 103, 97);
+        color: rgba(40,103,97,0.85);
+      }
+    }
+
+    .btn {
+
+      &:active {
+        color: white;
+        background: rgb(40, 103, 97);
+      }
+    }
+  }
+
+  #facts {
+    display: none;
+  }
+
+  #misc {
+    display: none;
+  }
 }
 
 .nav-tabs {

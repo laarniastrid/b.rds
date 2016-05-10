@@ -57,14 +57,14 @@ angular.module('myApp')
 
 .directive('animateDir', ["$state", function($state) {
   return {
-    restrict: 'A'
-    // link: function(scope, ele, att) {
-    //   $('.home-bottom').click(function() {
-    //     setTimeout(function() {
-    //       $('#about').addClass('.slideDown');
-    //     }, 150)
-    //   })
-    // }
+    restrict: 'A',
+    link: function(scope, ele, att) {
+
+      $('.typesBtn').click(function() {
+        $('#' + this.value).css('display', 'block');
+        $('#' + this.value).siblings().css('display', 'none');
+      })
+    }
   }  // end return
 }])  // end animateDir
 
@@ -144,10 +144,5 @@ angular.module('myApp')
   let vm = this;
 
   vm.typesSource = 'http://www.endslaverynow.org/learn/slavery-today';
-
-  // test tab jquery
-  $('nav-tabs-li').click(function() {
-    console.log('hi there');
-  })
 
 })  // end trafficCtrl
