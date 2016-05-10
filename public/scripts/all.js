@@ -68,13 +68,60 @@ angular.module('myApp')
 
 angular.module('myApp')
 
-.controller('contactCtrl', function() {
+.controller('contactCtrl', ["contactSvc", function(contactSvc) {
   let vm = this;
 
-  vm.test = 'this is the contact page';
+  vm.contactUrl = contactSvc.getUrl();
 
-})  // end contactCtrl
+  vm.sendRequest = (input) => {
+    contactSvc.setData(input.name, input.email, input.message);
+    contactSvc.sendMessage();
+    vm.sendData = '';
+  }
 
+}])  // end contactCtrl
+
+angular.module('myApp')
+
+.service('contactSvc', ["$http", function($http) {
+
+  let sendUrl = 'https://formspree.io/laarni.astrid@gmail.com';
+  let sendData = {
+    name: '',
+    email: '',
+    message: ''
+  };
+  let sendSuccess = 'Your message was sent!';
+
+  // ---------- setters ---------- //
+  this.setData = (name, email, message) => {
+    sendData.name = name;
+    sendData.email = email;
+    sendData.message = message;
+  }
+
+  // ---------- getters ---------- //
+  this.getUrl = () => {
+    return sendUrl;
+  }
+
+  // ---------- manipulators ---------- //
+  this.sendMessage = (name, email, message) => {
+    $.ajax({
+      url: sendUrl,
+      method: 'POST',
+      data: sendData,
+      dataType: 'json',
+      error: (response) => {
+        return response;
+      },
+      success: () => {
+        return sendSuccess;
+      }
+    })
+  }
+
+}])  // end contactSvc
 
 angular.module('myApp')
 
