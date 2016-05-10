@@ -1,26 +1,6 @@
-#contact {
+#about {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  form {
-    // width: 75%;
-    // height: auto;
-    // background: white;
-    padding: 20px;
-    border-radius: 5px;
-
-    button {
-      position: relative;
-      left: 50%;
-      transform: translate(-50%);
-
-      &:hover {
-        color: white;
-        background: rgb(90,37,37);
-        background: rgba(90,37,37,0.85);
-        border: none;
-      }
-    }
-  }
 }
