@@ -113,12 +113,16 @@ angular.module('myApp')
       data: sendData,
       dataType: 'json',
       error: (response) => {
-        return response;
+        ifSuccess(response);
       },
       success: () => {
-        return sendSuccess;
+        ifSuccess(sendSuccess);
       }
     })
+  }
+
+  function ifSuccess(data) {
+    alert(data);
   }
 
 }])  // end contactSvc
