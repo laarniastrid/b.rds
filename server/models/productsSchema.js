@@ -1,7 +1,9 @@
-var mongoose = require('mongoose'),
+'use strict'
+
+let mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var productsSchema = new Schema({
+let productsSchema = new Schema({
   title: {
     type: String,
     required: true
@@ -16,6 +18,7 @@ var productsSchema = new Schema({
   },
   image: {
     type: String
+    // required: true
   }
 })
 

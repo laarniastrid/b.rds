@@ -1,5 +1,7 @@
+'use strict'
+
 // ---------- initial vars for app ----------
-var express = require('express'),
+let express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     port = process.env.PORT || 8000,
@@ -15,12 +17,12 @@ app.use(express.static(__dirname + './public/index.html'));  // static part of s
 
 // ---------- connection to mongoose/heroku ----------
 mongoose.set('debug', true);
-mongoose.connect(connectPath, function(err) {
+mongoose.connect(connectPath, (err) => {
   if (err) {
     console.log(err);
   }
 });
-mongoose.connection.once('open', function(err) {
+mongoose.connection.once('open', (err) => {
   if (err) {
     console.log(err);
   } else {
@@ -29,27 +31,18 @@ mongoose.connection.once('open', function(err) {
 });
 
 
-// ---------- endpoints for productsSchema ----------
-app.get('/api/products', function(res, req, next) {  // get all products
-
-})
-app.get('/api/products/:id', function(res, req, next) {  // get 1 product
-
-})
-app.post('/api/products', function(res, req, next) {  // create a new product
-
-})
-app.put('/api/products/:id' function(res, req, next) {  // update a product
-
-})
-app.delete('/api/products/:id', function(res, req, next) {  // delete a product
-  
-})
+// ---------- endpoints for products ----------
+let productsCtrl = require('./server/controllers/productsCtrl.js');
+app.get('/api/products', productsCtrl.viewAll)
+app.get('/api/products/:id', productsCtrl.viewOne)
+app.post('/api/products', productsCtrl.create)
+app.put('/api/products/:id', productsCtrl.update)
+app.delete('/api/products/:id', productsCtrl.delete)
 
 
 
 // ---------- app.listen ----------
-app.listen(port, function(err) {
+app.listen(port, (err) => {
   if (err) {
     console.log(err);
   } else {
