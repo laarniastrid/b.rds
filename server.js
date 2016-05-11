@@ -12,7 +12,7 @@ let express = require('express'),
 
 // ---------- .use for app ----------
 app.use(bodyParser.json());
-app.use(express.static(__dirname + './public/index.html'));  // static part of site to connect to
+app.use(express.static(__dirname + './public'));  // static part of site to connect to
 
 
 // ---------- connection to mongoose/heroku ----------
@@ -39,6 +39,7 @@ app.post('/api/products', productCtrl.create)
 app.put('/api/products/:id', productCtrl.update)
 app.delete('/api/products/:id', productCtrl.delete)
 
+// ---------- endpoints for user ----------
 
 
 // ---------- app.listen ----------
