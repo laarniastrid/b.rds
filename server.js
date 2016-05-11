@@ -32,12 +32,12 @@ mongoose.connection.once('open', (err) => {
 
 
 // ---------- endpoints for products ----------
-let productsCtrl = require('./server/controllers/productsCtrl.js');
-app.get('/api/products', productsCtrl.viewAll)
-app.get('/api/products/:id', productsCtrl.viewOne)
-app.post('/api/products', productsCtrl.create)
-app.put('/api/products/:id', productsCtrl.update)
-app.delete('/api/products/:id', productsCtrl.delete)
+let productCtrl = require('./server/controllers/productCtrl.js');
+app.get('/api/products', productCtrl.viewAll)
+app.get('/api/products/:id', productCtrl.viewOne)
+app.post('/api/products', productCtrl.create)
+app.put('/api/products/:id', productCtrl.update)
+app.delete('/api/products/:id', productCtrl.delete)
 
 
 

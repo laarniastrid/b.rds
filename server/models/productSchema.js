@@ -3,7 +3,7 @@
 let mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-let productsSchema = new Schema({
+let productSchema = new Schema({
   title: {
     type: String,
     required: true
@@ -22,4 +22,4 @@ let productsSchema = new Schema({
   }
 })
 
-module.exports = mongoose.model('Products', productsSchema);
+module.exports = mongoose.model('Product', productSchema);
