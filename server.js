@@ -4,7 +4,7 @@
 let express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    port = process.env.PORT || 8000,
+    port = process.env.PORT || 6400,
     connectPath = process.env.MONGOLAB_URI || 'mongodb://localhost/brds',
     app = express();
     // keys = require('./keys.js');

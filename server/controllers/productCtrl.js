@@ -1,6 +1,6 @@
 'use strict'
 
-let Product = require('../models/ProductSchema.js');
+let Product = require('../models/productSchema.js');
 
 module.exports = {
   viewAll: (req, res, next) => {
