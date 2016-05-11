@@ -1,7 +1,4 @@
 #traffic {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   ul {
     list-style: none;
@@ -13,12 +10,14 @@
   }
 
   .panel-body {
-    height: 350px;
+    height: auto;
+    min-height: 50vh;
   }
 
   #types {
 
     p {
+      margin-top: 35px;
 
       em {
         color: rgb(40, 103, 97);
