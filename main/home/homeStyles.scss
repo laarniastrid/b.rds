@@ -27,11 +27,12 @@
 
     h1 {
       @include baseMargin;
-      font-size: 85px;
+      font-size: 125px;
     }
 
     p {
       @include baseMargin;
+      text-align: center;
     }
   }
 }

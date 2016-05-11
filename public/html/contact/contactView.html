@@ -1,14 +1,14 @@
 <div animate-dir>
   <nav-dir></nav-dir>
-  <div id="contact">
+  <div id="contact" class="slideDown">
 
-    <div class="col-md-9 col-sm-9">
+    <div class="col-md-10 col-sm-10">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4>Contact:</h4>
+          <h3>Contact:</h3>
         </div>
         <div class="panel-body">
-          <p>Need to get in touch, send a message below!</p>
+          <h4>Need to get in touch, send a message below!</h4>
           <form ng-submit="vm.sendRequest(vm.sendData)">
             <div class="form-group">
               <label for="name">Name:</label>
@@ -30,13 +30,14 @@
 
   </div>
 
+  <!-- nav arrows for about page -->
   <div class="about-left">
-    <a ui-sref="traffic"><i class="fa fa-chevron-circle-left"></i></a>
+    <a ui-sref="traffic"><i class="fa fa-chevron-left"></i></a>
   </div>
   <div class="about-right">
-    <a ui-sref="about"><i class="fa fa-chevron-circle-right"></i></a>
+    <a ui-sref="about"><i class="fa fa-chevron-right"></i></a>
   </div>
-  <div class="contact-bottom">
-    <a ui-sref="home"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a>
+  <div class="about-bottom">
+    <a ui-sref="home"><i class="fa fa-chevron-down"></i></a>
   </div>
 </div>

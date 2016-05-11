@@ -147,12 +147,33 @@ body {
     #home .jumbotron h1 {
       margin-left: 50px;
       margin-right: 50px;
-      font-size: 85px; }
+      font-size: 125px; }
     #home .jumbotron p {
       margin-left: 50px;
-      margin-right: 50px; }
+      margin-right: 50px;
+      text-align: center; }
 
 #traffic {
   display: flex;
   justify-content: center;
   align-items: center; }
+  #traffic ul {
+    list-style: none; }
+    #traffic ul li {
+      font-size: 15px;
+      margin-bottom: 10px; }
+  #traffic .panel-body {
+    height: 350px; }
+  #traffic #types p em {
+    color: #286761;
+    color: rgba(40, 103, 97, 0.85); }
+  #traffic #types .btn:active {
+    color: white;
+    background: #286761; }
+  #traffic #facts {
+    display: none; }
+  #traffic #misc {
+    display: none; }
+
+.nav-tabs li {
+  cursor: pointer; }

@@ -19,7 +19,9 @@ angular.module('myApp', ['ui.router'])
   })
   .state('traffic', {
     url: '/traffic',
-    templateUrl: './html/traffic/trafficView.html'
+    templateUrl: './html/traffic/trafficView.html',
+    controller: 'trafficCtrl',
+    controllerAs: 'vm'
   })
   // .state('sellBrds', {
   //   url: '/sellBrds',
@@ -55,14 +57,14 @@ angular.module('myApp')
 
 .directive('animateDir', ["$state", function($state) {
   return {
-    restrict: 'A'
-    // link: function(scope, ele, att) {
-    //   $('.home-bottom').click(function() {
-    //     setTimeout(function() {
-    //       $('#about').addClass('.slideDown');
-    //     }, 150)
-    //   })
-    // }
+    restrict: 'A',
+    link: function(scope, ele, att) {
+
+      $('.typesBtn').click(function() {
+        $('#' + this.value).css('display', 'block');
+        $('#' + this.value).siblings().css('display', 'none');
+      })
+    }
   }  // end return
 }])  // end animateDir
 
@@ -135,3 +137,12 @@ angular.module('myApp')
     templateUrl: './html/navigation/navTmpl.html'
   }
 })
+
+angular.module('myApp')
+
+.controller('trafficCtrl', function() {
+  let vm = this;
+
+  vm.typesSource = 'http://www.endslaverynow.org/learn/slavery-today';
+
+})  // end trafficCtrl
