@@ -1,6 +1,5 @@
 node_modules
 keys.js
 npm-debug.log
-.DS_Store
 *.env
 .sass-cache
