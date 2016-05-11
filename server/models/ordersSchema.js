@@ -4,7 +4,7 @@ let mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     productSchema = require('./productSchema.js')
 
-let ordersSchema = new Schema({
+let orderSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User',
@@ -24,4 +24,4 @@ let ordersSchema = new Schema({
   }]
 })
 
-module.exports = mongoose.model('orders', ordersSchema);
+module.exports = mongoose.model('Order', orderSchema);
