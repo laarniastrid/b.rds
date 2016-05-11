@@ -4,7 +4,7 @@
 let express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    port = process.env.PORT || 6400,
+    port = process.env.PORT || 8000,
     connectPath = process.env.MONGOLAB_URI || 'mongodb://localhost/brds',
     app = express();
     // keys = require('./keys.js');
@@ -12,7 +12,7 @@ let express = require('express'),
 
 // ---------- .use for app ----------
 app.use(bodyParser.json());
-app.use(express.static(__dirname + './public'));  // static part of site to connect to
+app.use(express.static(__dirname + '/public'));  // static part of site to connect to
 
 
 // ---------- connection to mongoose/heroku ----------
