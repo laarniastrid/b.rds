@@ -3,9 +3,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     port = process.env.PORT || 8000,
-    // port = process.env.PORT,
     connectPath = process.env.MONGOLAB_URI || 'mongodb://localhost/brds',
-    // connectPath = process.env.MONGOLAB_URI,
     app = express();
     // keys = require('./keys.js');
 
@@ -31,23 +29,23 @@ mongoose.connection.once('open', function(err) {
 });
 
 
-// ---------- base crud stuff for local ----------
-app.get('/api/', function(req, res, next) {
-  // console.log('getting');
-  res.status(200).send('getting');
-});
-app.post('/api/', function(req, res, next) {
-  // console.log('posting');
-  res.status(200).send('posting');
-});
-app.put('/api/:id', function(req, res, next) {
-  // console.log('putting');
-  res.status(200).send('putting');
-});
-app.delete('/api/:id', function(req, res, next) {
-  // console.log('deleting');
-  res.status(200).send('deleting');
-});
+// ---------- endpoints for productsSchema ----------
+app.get('/api/products', function(res, req, next) {  // get all products
+
+})
+app.get('/api/products/:id', function(res, req, next) {  // get 1 product
+
+})
+app.post('/api/products', function(res, req, next) {  // create a new product
+
+})
+app.put('/api/products/:id' function(res, req, next) {  // update a product
+
+})
+app.delete('/api/products/:id', function(res, req, next) {  // delete a product
+  
+})
+
 
 
 // ---------- app.listen ----------
