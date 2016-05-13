@@ -147,8 +147,10 @@ angular.module('myApp')
 
   vm.storeProducts = storeSvc.getStoreProducts()
     .then((response) => {
-      console.log(response.data);
+      vm.data = response.data;
+      return vm.data;
     })
+
 
 }])  // end storeCtrl
 
@@ -157,7 +159,7 @@ angular.module('myApp')
 .service('storeSvc', ["$http", function($http) {
 
   this.getStoreProducts = () => {
-    $http.get('/api/products');
+    return $http.get('/api/products');
   }
 
 }])  // end storeSvc

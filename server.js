@@ -8,7 +8,8 @@ let express = require('express'),
     connectPath = process.env.MONGOLAB_URI || 'mongodb://localhost/brds',
     // connectPath = 'mongodb://localhost/brds',
     app = express();
-    // keys = require('./keys.js');
+    // keys = require('./keys.js'),
+    // connectPath = keys.products;
 
 
 // ---------- .use for app ----------

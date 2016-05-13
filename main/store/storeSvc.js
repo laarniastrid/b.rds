@@ -3,10 +3,7 @@ angular.module('myApp')
 .service('storeSvc', function($http) {
 
   this.getStoreProducts = () => {
-    return $http.get('/api/products')
-      // .then((repsonse) => {
-      //   console.log(response);
-      // })
+    return $http.get('/api/products');
   }
 
 })  // end storeSvc

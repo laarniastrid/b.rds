@@ -10,7 +10,13 @@
         <span>stuff for store here</span>
       </div>
 
-      {{vm.storeProducts}}
+      <div ng-repeat="product in vm.data">
+        <div>
+          {{product.title}}<br />
+          {{product.description}}<br />
+          {{product.price}}
+        </div>
+      </div>
 
 
     </div>
