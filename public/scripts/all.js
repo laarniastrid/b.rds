@@ -142,13 +142,25 @@ angular.module('myApp')
 
 angular.module('myApp')
 
-.controller('storeCtrl', function() {
+.controller('storeCtrl', ["storeSvc", function(storeSvc) {
   let vm = this;
 
-  vm.test = 'hi there';
+  vm.storeProducts = storeSvc.getStoreProducts()
+    .then((response) => {
+      console.log(response.data);
+    })
 
-})  // end storeCtrl
+}])  // end storeCtrl
 
+angular.module('myApp')
+
+.service('storeSvc', ["$http", function($http) {
+
+  this.getStoreProducts = () => {
+    $http.get('/api/products');
+  }
+
+}])  // end storeSvc
 
 angular.module('myApp')
 

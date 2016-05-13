@@ -5,7 +5,8 @@ let express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     port = process.env.PORT || 8000,
-    connectPath = process.env.MONGOLAB_URI || 'mongodb://localhost/brds',
+    // connectPath = process.env.MONGOLAB_URI || 'mongodb://localhost/brds',
+    connectPath = 'mongodb://localhost/brds',
     app = express();
     // keys = require('./keys.js');
 
@@ -20,6 +21,9 @@ mongoose.set('debug', true);
 mongoose.connect(connectPath, (err) => {
   if (err) {
     console.log(err);
+  } else {
+    console.log('connectPath is', connectPath);
+    // console.log(process.env.MONGOLAB_URI);
   }
 });
 mongoose.connection.once('open', (err) => {
