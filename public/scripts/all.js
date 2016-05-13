@@ -41,7 +41,9 @@ angular.module('myApp', ['ui.router'])
   // })
   .state('store', {
     url: '/store',
-    templateUrl: './html/store/storeView.html'
+    templateUrl: './html/store/storeView.html',
+    controller: 'storeCtrl',
+    controllerAs: 'vm'
   })
   .state('cart', {
     url: '/cart',
@@ -137,6 +139,16 @@ angular.module('myApp')
     templateUrl: './html/navigation/navTmpl.html'
   }
 })
+
+angular.module('myApp')
+
+.controller('storeCtrl', function() {
+  let vm = this;
+
+  vm.test = 'hi there';
+
+})  // end storeCtrl
+
 
 angular.module('myApp')
 
