@@ -1,4 +1,4 @@
-angular.module('myApp', ['ui.router'])
+angular.module('myApp', ['ui.router', 'ngCart'])
 
 .config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
 
@@ -172,3 +172,5 @@ angular.module('myApp')
   vm.typesSource = 'http://www.endslaverynow.org/learn/slavery-today';
 
 })  // end trafficCtrl
+
+
