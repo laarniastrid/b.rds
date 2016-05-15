@@ -70,6 +70,8 @@ angular.module('myApp')
   }  // end return
 }])  // end animateDir
 
+
+
 angular.module('myApp')
 
 .controller('contactCtrl', ["contactSvc", function(contactSvc) {
@@ -172,5 +174,3 @@ angular.module('myApp')
   vm.typesSource = 'http://www.endslaverynow.org/learn/slavery-today';
 
 })  // end trafficCtrl
-
-
