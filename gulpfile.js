@@ -42,8 +42,8 @@ gulp.task('html', function() {
 });
 
 gulp.task('ngCartTmpl', function() {
-  gulp.src(['./public/bower_components/ngCart/template'])
-    .pipe(gulp.dest('./public/template'))
+  gulp.src(['./public/bower_components/ngCart/template/ngCart/*.html'])
+    .pipe(gulp.dest('./public/template/'))
 })
 
 gulp.task('default', ['sass', 'javascript', 'html', 'ngCartTmpl']);
