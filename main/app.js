@@ -1,4 +1,5 @@
-angular.module('myApp', ['ui.router', 'ngCart'])
+angular.module('myApp', ['ui.router'])
+// angular.module('myApp', ['ui.router', 'ngCart'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
