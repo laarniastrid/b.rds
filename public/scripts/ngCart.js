@@ -356,7 +356,7 @@ angular.module('ngCart.directives', ['ngCart.fulfilment'])
             transclude: true,
             templateUrl: function(element, attrs) {
                 if ( typeof attrs.templateUrl == 'undefined' ) {
-                    return 'template/ngCart/addtocart.html';
+                    return './template/addtocart.html';
                 } else {
                     return attrs.templateUrl;
                 }

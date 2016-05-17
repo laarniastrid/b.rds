@@ -12,10 +12,12 @@
 
       <div class="product-container">
         <div class="product" ng-repeat="product in vm.data">
-          {{product.title}}<br />
-          {{product.description}}<br />
-          {{product.price}}
-          <ngcart-addtocart id="{{product._id}}" name="{{product.title}}" price="product.price" quantity="1" quantity-max="30" data="product"></ngcart-addtocart>
+          <p>
+            {{product.title}}<br />
+            {{product.description}}<br />
+            {{product.price}}
+          </p>
+          <ngcart-addtocart id="{{product._id}}" name="{{product.title}}" price="{{product.price}}" quantity="1" quantity-max="5" data="product">Add to Cart</ngcart-addtocart>
         </div>
       </div>
 

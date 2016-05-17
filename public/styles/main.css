@@ -166,8 +166,9 @@ html, body {
   #store .product:hover {
     background: #283b67;
     background: rgba(40, 59, 103, 0.75);
-    color: white;
     border: none; }
+    #store .product:hover p {
+      color: white; }
 
 #traffic ul {
   list-style: none; }
