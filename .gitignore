@@ -3,3 +3,4 @@ keys.js
 npm-debug.log
 *.env
 .sass-cache
+**/bower_components
