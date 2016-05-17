@@ -1,3 +1,4 @@
+// angular.module('myApp', ['ui.router'])
 angular.module('myApp', ['ui.router', 'ngCart'])
 
 .config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
