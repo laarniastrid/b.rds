@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     // uglify = require('gulp-uglify'),
     uglifycss = require('gulp-uglifycss'),
     ngAnnotate = require('gulp-ng-annotate'),
-    watcher = gulp.watch(['./main/**/*.js', './main/**/*.scss', './main/**/*.html', './bower_components/ngCart/template'], ['default']);
+    watcher = gulp.watch(['./main/**/*.js', './main/**/*.scss', './main/**/*.html'], ['default']);
 
 watcher.on('change', function(event) {
   console.log('File ' + event.path + ' was ' + event.type + ' at ' + new Date() + ' , running tasks...');
@@ -41,9 +41,9 @@ gulp.task('html', function() {
     .pipe(gulp.dest('./public/html/'))
 });
 
-gulp.task('ngCartTmpl', function() {
-  gulp.src(['./public/bower_components/ngCart/template/ngCart/*.html'])
-    .pipe(gulp.dest('./public/template/'))
-})
+// gulp.task('ngCartTmpl', function() {
+//   gulp.src(['./public/bower_components/ngCart/template/ngCart/*.html'])
+//     .pipe(gulp.dest('./public/template/'))
+// })
 
-gulp.task('default', ['sass', 'javascript', 'html', 'ngCartTmpl']);
+gulp.task('default', ['sass', 'javascript', 'html']);
