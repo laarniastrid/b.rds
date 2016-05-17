@@ -151,7 +151,8 @@ html, body {
 #store .product-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 75px; }
 
 #store .product {
   width: 275px;
@@ -161,14 +162,38 @@ html, body {
   border: 1px solid rgba(40, 59, 103, 0.5);
   border-radius: 2px;
   margin: 10px;
+  margin-bottom: 65px;
   padding: 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative; }
+  #store .product p {
+    position: absolute;
+    bottom: 0; }
   #store .product:hover {
     background: #283b67;
     background: rgba(40, 59, 103, 0.75);
     border: none; }
     #store .product:hover p {
       color: white; }
+  #store .product ngcart-addtocart {
+    width: 100%;
+    position: absolute;
+    bottom: -40px;
+    left: 0; }
+    #store .product ngcart-addtocart div {
+      display: flex;
+      flex-flow: column;
+      justify-content: center; }
+      #store .product ngcart-addtocart div div {
+        display: flex;
+        flex-flow: row;
+        align-items: center; }
+        #store .product ngcart-addtocart div div > span {
+          margin-right: 10px; }
+    #store .product ngcart-addtocart mark {
+      width: 100%;
+      position: absolute;
+      left: 10%; }
 
 #traffic ul {
   list-style: none; }
