@@ -148,6 +148,25 @@ html, body {
       margin-right: 50px;
       text-align: center; }
 
+#store .product-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+
+#store .product {
+  width: 275px;
+  height: 225px;
+  border: 1px solid #283b67;
+  border: 1px solid rgba(40, 59, 103, 0.85);
+  border-radius: 2px;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer; }
+  #store .product:hover {
+    background: #283b67;
+    background: rgba(40, 59, 103, 0.85);
+    color: white;
+    border: none; }
 
 #traffic ul {
   list-style: none; }
