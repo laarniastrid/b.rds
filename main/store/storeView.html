@@ -6,24 +6,29 @@
     </div>
     <div class="col-sm-10 content-wrapper">
 
-      <div>
+      <div class="content-top">
         <span>Show your support!  A portion of sales will be donated
           to an organization dedicated to stopping Human Trafficking (tbd).</span>
       </div>
 
       <div class="product-container">
         <div class="product" ng-repeat="product in vm.data">
+          <img ng-src="{{product.image}}" />
           <p>
             {{product.title}}<br />
             {{product.description}}<br />
             {{product.price}}
           </p>
-          <ngcart-addtocart id="{{product._id}}" name="{{product.title}}" price="{{product.price}}" quantity="1" quantity-max="1" data="product">Add to Cart</ngcart-addtocart>
+          <ngcart-addtocart id="{{product._id}}" name="{{product.title}}" price="{{product.price}}" quantity="1" quantity-max="5" data="product">Add to Cart</ngcart-addtocart>
         </div>
       </div>
 
 
     </div>
+    <div class="col-sm-1">
+      <ngcart-summary></ngcart-summary>
+    </div>
+
   </div>
 
 </div>

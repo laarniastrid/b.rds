@@ -151,8 +151,8 @@ html, body {
 #store .product-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  margin-bottom: 75px; }
+  margin-bottom: 75px;
+  padding-left: 8%; }
 
 #store .product {
   width: 275px;
@@ -166,15 +166,13 @@ html, body {
   padding: 10px;
   cursor: pointer;
   position: relative; }
+  #store .product img {
+    width: 80%;
+    position: absolute;
+    right: 0; }
   #store .product p {
     position: absolute;
     bottom: 0; }
-  #store .product:hover {
-    background: #283b67;
-    background: rgba(40, 59, 103, 0.75);
-    border: none; }
-    #store .product:hover p {
-      color: white; }
   #store .product ngcart-addtocart {
     width: 100%;
     position: absolute;
@@ -194,6 +192,13 @@ html, body {
       width: 100%;
       position: absolute;
       left: 10%; }
+
+#store ngcart-summary {
+  position: relative;
+  right: 25%;
+  top: -15%; }
+  #store ngcart-summary .row {
+    text-align: center; }
 
 #traffic ul {
   list-style: none; }
