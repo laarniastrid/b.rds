@@ -145,6 +145,15 @@ angular.module('myApp')
 
 angular.module('myApp')
 
+.controller('trafficCtrl', function() {
+  let vm = this;
+
+  vm.typesSource = 'http://www.endslaverynow.org/learn/slavery-today';
+
+})  // end trafficCtrl
+
+angular.module('myApp')
+
 .controller('storeCtrl', ["storeSvc", function(storeSvc) {
   let vm = this;
 
@@ -166,12 +175,3 @@ angular.module('myApp')
   }
 
 }])  // end storeSvc
-
-angular.module('myApp')
-
-.controller('trafficCtrl', function() {
-  let vm = this;
-
-  vm.typesSource = 'http://www.endslaverynow.org/learn/slavery-today';
-
-})  // end trafficCtrl
