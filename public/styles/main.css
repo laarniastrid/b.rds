@@ -148,6 +148,58 @@ html, body {
       margin-right: 50px;
       text-align: center; }
 
+#store .product-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 75px;
+  padding-left: 8%; }
+
+#store .product {
+  width: 275px;
+  height: 225px;
+  color: #283b67;
+  border: 1px solid #283b67;
+  border: 1px solid rgba(40, 59, 103, 0.35);
+  border-radius: 2px;
+  margin: 10px;
+  margin-bottom: 65px;
+  padding: 10px;
+  cursor: pointer;
+  position: relative; }
+  #store .product img {
+    width: 80%;
+    position: absolute;
+    right: 0; }
+  #store .product p {
+    position: absolute;
+    bottom: 0; }
+  #store .product ngcart-addtocart {
+    width: 100%;
+    position: absolute;
+    bottom: -40px;
+    left: 0; }
+    #store .product ngcart-addtocart div {
+      display: flex;
+      flex-flow: column;
+      justify-content: center; }
+      #store .product ngcart-addtocart div div {
+        display: flex;
+        flex-flow: row;
+        align-items: center; }
+        #store .product ngcart-addtocart div div > span {
+          margin-right: 10px; }
+    #store .product ngcart-addtocart mark {
+      width: 100%;
+      position: absolute;
+      left: 10%; }
+
+#store ngcart-summary {
+  position: relative;
+  right: 25%;
+  top: -15%; }
+  #store ngcart-summary .row {
+    text-align: center; }
+
 #traffic ul {
   list-style: none; }
   #traffic ul li {
@@ -179,54 +231,3 @@ html, body {
 
 .typesInfo {
   padding-left: 15px; }
-
-#store .product-container {
-  display: flex;
-  flex-flow: row wrap;
-  margin-bottom: 75px;
-  padding-left: 8%; }
-
-#store .product {
-  width: 275px;
-  height: 225px;
-  color: #283b67;
-  border: 1px solid #283b67;
-  border: 1px solid rgba(40, 59, 103, 0.35);
-  border-radius: 2px;
-  margin: 10px;
-  margin-bottom: 65px;
-  padding: 10px;
-  cursor: pointer;
-  position: relative; }
-  #store .product p {
-    position: absolute;
-    bottom: 0; }
-  #store .product ngcart-addtocart {
-    width: 100%;
-    position: absolute;
-    bottom: -40px;
-    left: 0; }
-    #store .product ngcart-addtocart div {
-      display: flex;
-      flex-flow: column;
-      justify-content: center; }
-      #store .product ngcart-addtocart div div {
-        display: flex;
-        flex-flow: row;
-        align-items: center; }
-        #store .product ngcart-addtocart div div > span {
-          margin-right: 10px; }
-    #store .product ngcart-addtocart mark {
-      width: 100%;
-      position: absolute;
-      left: 10%; }
-
-#store ngcart-summary {
-  position: relative;
-  right: 25%;
-  top: -15%; }
-  #store ngcart-summary .row {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
