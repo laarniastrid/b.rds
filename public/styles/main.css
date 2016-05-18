@@ -169,12 +169,6 @@ html, body {
   #store .product p {
     position: absolute;
     bottom: 0; }
-  #store .product:hover {
-    background: #283b67;
-    background: rgba(40, 59, 103, 0.75);
-    border: none; }
-    #store .product:hover p {
-      color: white; }
   #store .product ngcart-addtocart {
     width: 100%;
     position: absolute;
