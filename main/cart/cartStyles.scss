@@ -1,0 +1,13 @@
+#cart {
+
+  .content-wrapper {
+    position: relative;
+    top: 100px;
+  }
+
+  ngcart-checkout {
+    position: absolute;
+    right: 0;
+  }
+
+}

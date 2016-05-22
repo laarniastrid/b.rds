@@ -111,6 +111,14 @@ html, body {
   animation: slideRight 1s ease; }
 
 
+#cart .content-wrapper {
+  position: relative;
+  top: 100px; }
+
+#cart ngcart-checkout {
+  position: absolute;
+  right: 0; }
+
 #contact form {
   padding: 0 auto auto 20px;
   border-radius: 5px; }
