@@ -48,7 +48,7 @@ angular.module('myApp', ['ui.router', 'ngCart'])
   })
   .state('cart', {
     url: '/cart',
-    templateUrl: './html/cartView.html'
+    templateUrl: './html/cart/cartView.html'
   })
 
   $urlRouterProvider.otherwise('/');
@@ -70,8 +70,6 @@ angular.module('myApp')
     }
   }  // end return
 }])  // end animateDir
-
-
 
 angular.module('myApp')
 
