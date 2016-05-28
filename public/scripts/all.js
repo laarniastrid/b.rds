@@ -48,7 +48,9 @@ angular.module('myApp', ['ui.router', 'ngCart'])
   })
   .state('cart', {
     url: '/cart',
-    templateUrl: './html/cart/cartView.html'
+    templateUrl: './html/cart/cartView.html',
+    controller: 'cartCtrl',
+    controllerAs: 'vm'
   })
 
   $urlRouterProvider.otherwise('/');
@@ -70,6 +72,27 @@ angular.module('myApp')
     }
   }  // end return
 }])  // end animateDir
+
+angular.module('myApp')
+
+.controller('cartCtrl', ["cartSvc", function(cartSvc) {
+  let vm = this;
+
+  vm.business = cartSvc.getBusiness();
+
+}])  // end cartCtrl
+
+angular.modeul('myApp')
+
+.service('cartSvc', function() {
+  let business = 'las723sp@gmail.com';
+
+  // ----- getters ----- //
+  this.getBusiness = () => {
+    return business;
+  }
+
+}) // end cartSvc
 
 angular.module('myApp')
 

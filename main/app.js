@@ -48,7 +48,9 @@ angular.module('myApp', ['ui.router', 'ngCart'])
   })
   .state('cart', {
     url: '/cart',
-    templateUrl: './html/cart/cartView.html'
+    templateUrl: './html/cart/cartView.html',
+    controller: 'cartCtrl',
+    controllerAs: 'vm'
   })
 
   $urlRouterProvider.otherwise('/');
