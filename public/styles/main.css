@@ -120,19 +120,6 @@ html, body {
   right: 0;
   bottom: -50px; }
 
-#contact form {
-  padding: 0 auto auto 20px;
-  border-radius: 5px; }
-  #contact form button {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%); }
-    #contact form button:hover {
-      color: white;
-      background: #5a2525;
-      background: rgba(90, 37, 37, 0.85);
-      border: none; }
-
 #home {
   background: #283b67;
   background: rgba(40, 59, 103, 0.85); }
@@ -157,6 +144,19 @@ html, body {
       margin-right: 50px;
       text-align: center; }
 
+#contact form {
+  padding: 0 auto auto 20px;
+  border-radius: 5px; }
+  #contact form button {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%); }
+    #contact form button:hover {
+      color: white;
+      background: #5a2525;
+      background: rgba(90, 37, 37, 0.85);
+      border: none; }
+
 #store .product-container {
   display: flex;
   flex-flow: row wrap;
@@ -173,7 +173,6 @@ html, body {
   margin: 10px;
   margin-bottom: 65px;
   padding: 10px;
-  cursor: pointer;
   position: relative; }
   #store .product img {
     width: 80%;
