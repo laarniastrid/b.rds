@@ -11,17 +11,9 @@ html, body {
   margin-top: 50px;
   padding-top: 40px; }
 
-#about {
-  background: #bd6a38;
-  background: rgba(189, 106, 56, 0.85); }
-
 #contact {
   background: #5a2525;
   background: rgba(90, 37, 37, 0.85); }
-
-#traffic {
-  background: #286761;
-  background: rgba(40, 103, 97, 0.85); }
 
 .dropdown-toggle {
   cursor: pointer; }
@@ -35,8 +27,8 @@ html, body {
   justify-content: center; }
   .home-bottom i, .about-bottom i, .contact-bottom i, .traffic-bottom i {
     font-size: 55px;
-    color: white;
-    color: rgba(255, 255, 255, 0.5); }
+    color: black;
+    color: rgba(0, 0, 0, 0.5); }
     .home-bottom i:hover, .about-bottom i:hover, .contact-bottom i:hover, .traffic-bottom i:hover {
       color: #222222; }
 
@@ -50,8 +42,8 @@ html, body {
   align-items: center; }
   .about-left i, .contact-left i, .traffic-left i {
     font-size: 55px;
-    color: white;
-    color: rgba(255, 255, 255, 0.5); }
+    color: black;
+    color: rgba(0, 0, 0, 0.5); }
     .about-left i:hover, .contact-left i:hover, .traffic-left i:hover {
       color: #222222; }
 
@@ -65,10 +57,13 @@ html, body {
   align-items: center; }
   .about-right i, .contact-right i, .traffic-right i {
     font-size: 55px;
-    color: white;
-    color: rgba(255, 255, 255, 0.5); }
+    color: black;
+    color: rgba(0, 0, 0, 0.5); }
     .about-right i:hover, .contact-right i:hover, .traffic-right i:hover {
       color: #222222; }
+
+.content-wrapper {
+  margin-bottom: 50px; }
 
 @keyframes slideUp {
   from {
@@ -110,6 +105,10 @@ html, body {
 .slideRight {
   animation: slideRight 1s ease; }
 
+#about .panel-heading {
+  background: #bd6a38;
+  background: rgba(189, 106, 56, 0.85);
+  color: white; }
 
 #cart .content-wrapper {
   position: relative;
@@ -133,29 +132,30 @@ html, body {
       background: rgba(90, 37, 37, 0.85);
       border: none; }
 
-#home {
+#home .jumbotron {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   background: #283b67;
-  background: rgba(40, 59, 103, 0.85); }
-  #home .jumbotron {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 60%;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around; }
-    #home .jumbotron h1 {
-      margin-left: 50px;
-      margin-right: 50px;
-      font-size: 125px; }
-    #home .jumbotron p {
-      margin-left: 50px;
-      margin-right: 50px;
-      text-align: center; }
+  background: rgba(40, 59, 103, 0.85);
+  color: white;
+  text-align: center; }
+  #home .jumbotron h1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 125px; }
+  #home .jumbotron p {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center; }
 
 #store .product-container {
   display: flex;
@@ -218,6 +218,11 @@ html, body {
 #traffic .panel-body {
   height: auto;
   min-height: 50vh; }
+
+#traffic .panel-heading {
+  background: #286761;
+  background: rgba(40, 103, 97, 0.85);
+  color: white; }
 
 #traffic #types p {
   margin-top: 35px; }

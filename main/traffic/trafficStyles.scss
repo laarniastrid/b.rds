@@ -1,4 +1,6 @@
 #traffic {
+  // background: rgb(40,103,97);
+  // background: rgba(40,103,97,0.85);
 
   ul {
     list-style: none;
@@ -13,6 +15,12 @@
   .panel-body {
     height: auto;
     min-height: 50vh;
+  }
+
+  .panel-heading {
+    background: rgb(40,103,97);
+    background: rgba(40,103,97,0.85);
+    color: white;
   }
 
   #types {

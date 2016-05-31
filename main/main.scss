@@ -1,7 +1,7 @@
 @mixin iconArrows() {
     font-size: 55px;
-    color: white;
-    color: rgba(255,255,255,0.5);
+    color: black;
+    color: rgba(0,0,0,0.5);
 
     &:hover {
       color: rgb(34,34,34);
@@ -34,19 +34,9 @@ body {
   // align-items: center;
 }
 
-#about {
-  background: rgb(189,106,56);
-  background: rgba(189,106,56,0.85);
-}
-
 #contact {
   background: rgb(90,37,37);
   background: rgba(90,37,37,0.85);
-}
-
-#traffic {
-  background: rgb(40,103,97);
-  background: rgba(40,103,97,0.85);
 }
 
 .dropdown-toggle {
@@ -93,6 +83,10 @@ body {
   i {
     @include iconArrows;
   }
+}
+
+.content-wrapper {
+  margin-bottom: 50px;
 }
 
 /////////////////////////////////////
