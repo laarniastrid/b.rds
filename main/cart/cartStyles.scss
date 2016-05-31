@@ -5,10 +5,24 @@
     top: 100px;
   }
 
+  .panel-heading {
+    background: rgb(80,154,81);
+    background: rgba(80,154,81,0.85);
+    color: white;
+  }
+
   ngcart-checkout {
     position: absolute;
     right: 0;
     bottom: -50px;
+  }
+
+  .back-store {
+    font-size: 25px;
+    position: absolute;
+    bottom: -25px;
+    left: 30px;
+    text-decoration: none;
   }
 
 }
