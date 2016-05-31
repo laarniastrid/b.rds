@@ -82,7 +82,7 @@ angular.module('myApp')
 
 }])  // end cartCtrl
 
-angular.modeul('myApp')
+angular.module('myApp')
 
 .service('cartSvc', function() {
   let business = 'las723sp@gmail.com';
