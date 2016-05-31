@@ -209,7 +209,8 @@ html, body {
     text-align: center; }
 
 #traffic ul {
-  list-style: none; }
+  list-style: none;
+  padding-left: 20px; }
   #traffic ul li {
     font-size: 15px;
     margin-bottom: 10px; }
