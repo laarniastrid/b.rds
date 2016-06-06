@@ -6,7 +6,9 @@ angular.module('myApp', ['ui.router', 'ngCart'])
   $stateProvider
   .state('home', {
     url: '/',
-    templateUrl: './html/home/homeView.html'
+    templateUrl: './html/home/homeView.html',
+    controller: 'homeCtrl',
+    controllerAs: 'vm'
   })
   .state('about', {
     url: '/about',

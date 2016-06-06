@@ -6,7 +6,9 @@ angular.module('myApp', ['ui.router', 'ngCart'])
   $stateProvider
   .state('home', {
     url: '/',
-    templateUrl: './html/home/homeView.html'
+    templateUrl: './html/home/homeView.html',
+    controller: 'homeCtrl',
+    controllerAs: 'vm'
   })
   .state('about', {
     url: '/about',
@@ -157,6 +159,20 @@ angular.module('myApp')
 
 angular.module('myApp')
 
+.controller('homeCtrl', ["storeSvc", function(storeSvc) {
+  let vm = this;
+
+  vm.products = storeSvc.getStoreProducts()
+    .then((response) => {
+      vm.data = response.data;
+      // return vm.data;
+      storeSvc.setProducts(vm.data);
+    })
+
+}]) // end homeCtrl
+
+angular.module('myApp')
+
 .directive('navDir', function() {
   return {
     restrict: 'E',
@@ -169,18 +185,31 @@ angular.module('myApp')
 .controller('storeCtrl', ["storeSvc", function(storeSvc) {
   let vm = this;
 
-  vm.storeProducts = storeSvc.getStoreProducts()
-    .then((response) => {
-      vm.data = response.data;
-      return vm.data;
-    })
+  // vm.storeProducts = storeSvc.getStoreProducts()
+  //   .then((response) => {
+  //     vm.data = response.data;
+  //     return vm.data;
+  //   })
 
+  vm.products = storeSvc.getProducts();
 
 }])  // end storeCtrl
 
 angular.module('myApp')
 
 .service('storeSvc', ["$http", function($http) {
+
+  let products = [];
+
+  this.setProducts = (input) => {
+    input.forEach((entry, i) => {
+      products[i] = entry;
+    })
+  }
+
+  this.getProducts = () => {
+    return products;
+  }
 
   this.getStoreProducts = () => {
     return $http.get('/api/products');
