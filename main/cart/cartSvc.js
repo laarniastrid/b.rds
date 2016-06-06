@@ -1,11 +1,11 @@
 angular.module('myApp')
 
-.service('cartSvc', function() {
-  let business = 'las723sp@gmail.com';
+.service('cartSvc', function($http) {
 
   // ----- getters ----- //
   this.getBusiness = () => {
-    return business;
+    return $http.get('/api/bus_email');
   }
+
 
 }) // end cartSvc

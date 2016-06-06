@@ -7,9 +7,10 @@ let express = require('express'),
     port = process.env.PORT || 8000,
     connectPath = process.env.MONGOLAB_URI || 'mongodb://localhost/brds',
     // connectPath = 'mongodb://localhost/brds',
-    app = express();
+    app = express(),
     // keys = require('./keys.js'),
     // connectPath = keys.products;
+    busEmail = process.env.BUS_EMAIL || 'test@test.com';
 
 
 // ---------- .use for app ----------
@@ -45,6 +46,12 @@ app.put('/api/products/:id', productCtrl.update)
 app.delete('/api/products/:id', productCtrl.delete)
 
 // ---------- endpoints for user ----------
+
+
+// ---------- endpoint for business email ----------
+app.get('/api/bus_email', function(req, res, next) {
+  res.send(busEmail);
+})
 
 
 // ---------- app.listen ----------

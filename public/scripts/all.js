@@ -80,21 +80,25 @@ angular.module('myApp')
 .controller('cartCtrl', ["cartSvc", function(cartSvc) {
   let vm = this;
 
-  vm.business = cartSvc.getBusiness();
+  vm.business = cartSvc.getBusiness()
+    .then((response) => {
+      vm.email = response.data;
+      console.log(vm.email);
+    })
 
 }])  // end cartCtrl
 
 angular.module('myApp')
 
-.service('cartSvc', function() {
-  let business = 'las723sp@gmail.com';
+.service('cartSvc', ["$http", function($http) {
 
   // ----- getters ----- //
   this.getBusiness = () => {
-    return business;
+    return $http.get('/api/bus_email');
   }
 
-}) // end cartSvc
+
+}]) // end cartSvc
 
 angular.module('myApp')
 
